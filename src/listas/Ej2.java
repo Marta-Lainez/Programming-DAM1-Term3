@@ -1,3 +1,7 @@
+/*
+2) Leer dos vectores de dimensión 10 para construir un tercer vector cuyos componentes sean la
+suma de los dos anteriores e imprimirlo
+ */
 package listas;
 import java.util.ArrayList;
 public class Ej2 {

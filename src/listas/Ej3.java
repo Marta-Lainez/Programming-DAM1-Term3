@@ -1,3 +1,7 @@
+/*
+3) Leer un vector de 10 componentes enteros; calcular el mayor, el menor y los lugares donde se
+encuentran.
+ */
 package listas;
 import java.util.*;
 public class Ej3 {

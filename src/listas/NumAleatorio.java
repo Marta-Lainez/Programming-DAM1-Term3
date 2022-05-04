@@ -1,3 +1,6 @@
+/*
+Esta clase crea un numero entero aleatorio entre 0 y 99 incluidos. (0 , 99)
+ */
 package listas;
 
 public class NumAleatorio {
