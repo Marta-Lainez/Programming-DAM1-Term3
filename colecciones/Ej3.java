@@ -9,7 +9,7 @@ public class Ej3 {
 	public static void main(String[] args) {
 		ArrayList<NumAleatorio> lista = crearLista(10);
 		
-		Iterator <NumAleatorio> iterador = lista.iterator();
+		ListIterator <NumAleatorio> iterador = lista.listIterator();
 		int mayor = lista.get(0).getNum();
 		int posicionMayor = 0;
 		int menor = mayor;
@@ -17,22 +17,21 @@ public class Ej3 {
 		
 		imprimir(lista);
 		System.out.println("////");
-		int i = 0;
+		
 		/*
-		 * Creo un iterador que va recorriendo la lista elemento a elemento. Guardo el elemento en cada ronda en la variable valor, y la voy comparando
-		 * con el mas grande y el mas pequeño. Para los indices creo un contador i que va incrementando cada ronda.
+		 * Creo un ListIterador que va recorriendo la lista elemento a elemento. Guardo el elemento en cada ronda en la variable valor, y la voy comparando
+		 * con el mas grande y el mas pequeño. Cuando encuentro un mayor o menor, guardo su valor y tambien su posicion con un  nextIndex()
 		 */
 		while (iterador.hasNext()) {
 			int valor = iterador.next().getNum();
 			if (valor > mayor) {
 				mayor = valor;
-				posicionMayor = i;
+				posicionMayor = iterador.nextIndex();
 			}
 			if (valor < menor) {
 				menor = valor;
-				posicionMenor = i;
-			}
-			i++;
+				posicionMenor = iterador.nextIndex();
+			}	
 		}
 		
 		System.out.println("Mayor en la posicion " + posicionMayor + ": " + mayor);
