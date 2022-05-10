@@ -14,7 +14,7 @@ la tabla). Las operaciones a implementar (métodos de la clase) son las siguiente
 	conjuntos son iguales si tienen los mismos elementos y en el mismo orden
 · imprimir: realiza la visualización del conjunto.
  */
-package colecciones;
+
 import java.util.*;
 
 public class Ej7 {
@@ -22,17 +22,22 @@ public class Ej7 {
 	public static void main(String[] args) {
 		// Creo 2 conjuntos
 		Set <Integer> conjunto = new HashSet <Integer>(100);
-		Set <Integer> conjunto2 = new HashSet <Integer>(100);
+		/*Set <Integer> conjunto2 = new HashSet <Integer>(100);*/
 		// Relleno 2 conjuntos con enteros NO DUPLICADOS hasta que tengan 100 elementos
 		while(conjunto.size() < 100) {
 			conjunto = agregar(conjunto, (int)(Math.random()*200)+1);
 		}
+		/*
 		while(conjunto2.size() < 100) {
 			conjunto2 = agregar(conjunto2, (int)(Math.random()*200)+1);
 		}
-		imprimir(conjunto);
-		imprimir(conjunto2);
-		System.out.println(esIgual(conjunto,conjunto2));
+		*/
+		// imprimir(conjunto);
+		/*imprimir(conjunto2);
+		System.out.println(esIgual(conjunto,conjunto2));*/
+		Set copia = copiar(conjunto);
+		System.out.println(esIgual(conjunto,copia));
+		
 	}
 	
 	// vaciar: vacía el conjunto
@@ -77,7 +82,10 @@ public class Ej7 {
 	// esIgual: devuelve true si un conjunto es igual a otro, teniendo en cuenta que dos
 	// conjuntos son iguales si tienen los mismos elementos y en el mismo orden
 	static boolean esIgual (Set <Integer> conjunto,Set <Integer> conjunto2) {
-		return conjunto.containsAll(conjunto2);
+		if (conjunto.size() == conjunto2.size() && conjunto.containsAll(conjunto2)) {
+			return true;
+		}
+		return false;
 	}
 	// imprimir: realiza la visualización del conjunto
 	static void imprimir (Set <Integer> conjunto) {

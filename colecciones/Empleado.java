@@ -4,7 +4,7 @@ Empleado y luego lo llene con datos correspondientes a 50 empleados (utilizar un
 nombres para rellenar con un random). Una vez rellenado, visualizar los datos de todos los
 empleados
  */
-package colecciones;
+
 
 public class Empleado {
 	private String nombre;

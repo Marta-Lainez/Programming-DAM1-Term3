@@ -7,7 +7,6 @@ almacenado en la colección.
 Diseña los métodos necesarios para gestionar la colección.
  */
 
-package colecciones;
 
 public class Discos {
 	private String titulo;

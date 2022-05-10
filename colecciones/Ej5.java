@@ -6,7 +6,7 @@ Coleccion. Los datos miembro serán:
 almacenado en la colección.
 Diseña los métodos necesarios para gestionar la colección.
  */
-package colecciones;
+
 import java.util.*;
 public class Ej5 {
 

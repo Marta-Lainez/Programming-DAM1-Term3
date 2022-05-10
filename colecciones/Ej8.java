@@ -6,26 +6,24 @@ creciente y, tomando el último valor que almacene, compararlo con el saldo de lo
 objetos mediante un metodo getSaldo y mostrar por pantalla los que sean iguales que el saldo
 máximo.
  */
-package colecciones;
+
 import java.util.*;
 
 public class Ej8 {
 
 	public static void main(String[] args) {
-		Set <CuentaCorriente> cuentas = rellenaCuentas(100);
-		Set <Float> saldos = rellenaSaldos(cuentas);
-	
-		
+		TreeSet <CuentaCorriente> cuentas = rellenaCuentas(100);
+		// Set <Float> saldos = rellenaSaldos(cuentas);
 		
 		
 	}
 	
-	static Set <CuentaCorriente> rellenaCuentas (int tamaño){
-		Set <CuentaCorriente> cuentas = new TreeSet <CuentaCorriente>();
-		while (cuentas.size() <= tamaño) {
-			cuentas.add(new CuentaCorriente());
+	static TreeSet <CuentaCorriente> rellenaCuentas (int tamaño){
+		TreeSet <CuentaCorriente> cuenta = new TreeSet <CuentaCorriente>();
+		while (cuenta.size() <= tamaño) {
+			cuenta.add(new CuentaCorriente());
 		}
-		return cuentas;
+		return cuenta;
 	}
 	
 	static Set <Float> rellenaSaldos (Set <CuentaCorriente> cuentas){

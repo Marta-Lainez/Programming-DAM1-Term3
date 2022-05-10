@@ -6,7 +6,6 @@ y mostrar la media y, además, mostrar cuántos números hay:
 -Inferiores a la media
 -Iguales a la media
  */
-package colecciones;
 
 import java.util.*;
 public class Ej1 {

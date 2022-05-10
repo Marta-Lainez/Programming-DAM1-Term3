@@ -6,23 +6,22 @@ creciente y, tomando el último valor que almacene, compararlo con el saldo de lo
 objetos mediante un metodo getSaldo y mostrar por pantalla los que sean iguales que el saldo
 máximo.
  */
-package colecciones;
 
+
+import java.util.Objects;
 import java.util.Scanner;
 
-public class CuentaCorriente {
+public class CuentaCorriente implements Comparable <CuentaCorriente>{
 	Scanner teclado = new Scanner(System.in);
 	private String titular;
 	private float saldo;
-	private String codigo;
+	final private int codigo;
 
-	private float dinero;
-	private int operacion;
 	
 	public CuentaCorriente() {
 		titular = "Titular";
 		saldo = (int)(Math.random()*1000)+1;
-		codigo = "00000000";
+		codigo = (int)(Math.random()*999999)+1;
 		
 	}
 	// Setters y getters de todos los atributos
@@ -42,30 +41,26 @@ public class CuentaCorriente {
 		return saldo;
 	}
 
-	public void setCodigo(String newCodigo) {
-		this.codigo = newCodigo;
-	}
-
-	public String getCodigo() {
+	public int getCodigo() {
 		return codigo;
 	}
-
-	public void setDinero(float newDinero) {
-		this.dinero = newDinero;
+	@Override
+	public int hashCode() {
+		return Objects.hash(codigo);
 	}
-
-	public float getDinero() {
-		return dinero;
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj)
+			return true;
+		if (!(obj instanceof CuentaCorriente))
+			return false;
+		CuentaCorriente other = (CuentaCorriente) obj;
+		return codigo == other.codigo;
 	}
-
-	public void setOperacion(int newOperacion) {
-		this.operacion = newOperacion;
+	public int compareTo(CuentaCorriente e) {
+		
+		return codigo-e.codigo;
 	}
-
-	public int getOperacion() {
-		return operacion;
-	}
-
 	
 
 }
