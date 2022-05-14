@@ -1,0 +1,6 @@
+0123abc	Kio	Mini	Marta Lainez	03/11/2021
+1863ary	Kio	Ultra	Marto Linoz	15/01/2011
+Multa:	25/12/2021	Saltarse un Ceda	750
+Multa:	05/12/2021	Saltarse un Stop	1000
+6783bhe	Kia	Mini	Martu Lunuz	08/12/2009
+Multa:	07/02/2021	Saltarse un Ceda	750

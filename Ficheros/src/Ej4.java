@@ -21,10 +21,6 @@ public class Ej4 {
 			// Forma de separar palabras de una linea por espacios y almacenarlas por separado en un vector de Strings
 			String linea = entrada.nextLine();
 			String[] palabras = linea.split(" ");
-			String palabra1 = palabras[0];
-			String palabra2 = palabras[1];
-			String palabra3 = palabras[2];
-			String palabra4 = palabras[3];
 			
 			ArrayList <String> lista = new ArrayList<String>(); // Paso los elementos del vector a una lista
 			for (int i = 0; i < palabras.length; i++) {
