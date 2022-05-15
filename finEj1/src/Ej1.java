@@ -130,7 +130,7 @@ public class Ej1 {
 				else
 					cocheCorrecto = false;
 				
-				if(cocheMatricula.equals("1863ary")) {
+				if(cocheMatricula.equals(matricula)) {
 					cocheCorrecto = true;
 				}
 			}
@@ -213,6 +213,7 @@ public class Ej1 {
 				if(printStream != null) {
 					printStream.close();
 				}
+				
 			}
 			
 			deCopiaACoche();
@@ -326,7 +327,7 @@ public class Ej1 {
 				break;
 			case 3:
 				annadirMulta("7429abc", "04/02/2021", "Exceso de velocidad", 250);
-				System.out.println("Opción 5 realizada con exito.");
+				System.out.println("Opción 3 realizada con exito.");
 				imprimeMenu();
 				opcion = teclado.nextInt();
 				break;
@@ -345,7 +346,7 @@ public class Ej1 {
 				System.out.println("Introduzca el valor de la multa:");
 				int valor = teclado.nextInt();
 				valorMultas(valor);
-				System.out.println("Opción 7 realizada con exito.");
+				System.out.println("Opción 6 realizada con exito.");
 				imprimeMenu();
 				opcion = teclado.nextInt();
 				break;

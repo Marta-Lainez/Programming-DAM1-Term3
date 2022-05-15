@@ -13,6 +13,9 @@ public class Ej8 {
 
 	public static void main(String[] args) {
 		TreeSet <CuentaCorriente> cuentas = rellenaCuentas(100);
+		for(CuentaCorriente e: cuentas) {
+			System.out.println(e.getCodigo());
+		}
 		// Set <Float> saldos = rellenaSaldos(cuentas);
 		
 		
@@ -30,7 +33,7 @@ public class Ej8 {
 		Set <Float> saldos = new TreeSet <Float>();
 		Iterator <CuentaCorriente> iterador = cuentas.iterator();
 		while (iterador.hasNext()) {
-			float saldo = iterador. next().getSaldo();
+			float saldo = iterador.next().getSaldo();
 			saldos.add(saldo);
 		}
 		return saldos;
